@@ -21,13 +21,13 @@ if (age < 18) {
     let scontoUnderSuPrezzo = prezzoSenzaSconto * scontoUnder;
     console.log(scontoUnderSuPrezzo.toFixed(2));
     let prezzoFinale = prezzoSenzaSconto - scontoUnderSuPrezzo;
-    let messaggio = "Il prezzo finale è di: € " + prezzoFinale.toFixed(2);
-    document.getElementById('price').innerHTML = messaggio;
+    let messaggio = prezzoFinale;
+    document.getElementById('price').innerHTML = messaggio.toFixed(2);
 } else if (age >= 65) {
     let scontoOverSuPrezzo = prezzoSenzaSconto * scontoOver;
     console.log(scontoOverSuPrezzo.toFixed(2));
     let prezzoFinale = prezzoSenzaSconto - scontoOverSuPrezzo;
-    let messaggio = "Il prezzo finale è di: € " + prezzoFinale.toFixed(2);
+    let messaggio = prezzoFinale.toFixed(2);
     document.getElementById('price').innerHTML = messaggio;
 } else if (km === null && age === null) {
     document.getElementById('Km').innerHTML = "ERRORE!";
